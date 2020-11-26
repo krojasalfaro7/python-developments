@@ -1,11 +1,7 @@
-"""
-Search and return the element of a dictionary list by key and item
-"""
-
-
 def finditemdictlist(key="key", value="value", dictlist=[]):
     """
-
+    Search and return the element of a dictionary list by key and item
+    
     :param key: item key
     :param value: item value
     :param dictlist: dictionary list

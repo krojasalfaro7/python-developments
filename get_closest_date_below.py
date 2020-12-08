@@ -1,4 +1,11 @@
+# File name: get_closest_date_below.py
+# Author: Kevin Rojas
+# email: krojas.alfaro7@gmail.com
+# Python Version: 3.8
+# Funcion que devuelve la fecha mas cercana por debajo de una lista de fechas y una fecha dada
+
 import datetime
+
 
 def get_closest_date_below(listdate, date):
     """

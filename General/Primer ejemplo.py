@@ -1,0 +1,11 @@
+import turtle
+window = turtle.Screen()
+david=turtle.Turtle()
+david.forward(100)
+david.left(90)
+david.forward(100)
+david.left(90)
+david.forward(100)
+david.left(90)
+david.forward(100)
+david.left(90)

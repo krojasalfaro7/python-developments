@@ -1,4 +1,4 @@
-class MoneyExchange:
+class CurrencyExchange:
     def __init__(self, rate, commission_pct, from_currency_symbol, to_currency_symbol) -> None:
         self.rate = rate
         self.commission_pct = commission_pct
@@ -33,7 +33,7 @@ class MoneyExchange:
             }
         }
 
-class USD_VES_Exchange(MoneyExchange):
+class USD_VES_Exchange(CurrencyExchange):
     def __init__(self, rate, commission_pct=0) -> None:
         super().__init__(rate, commission_pct, from_currency_symbol="$", to_currency_symbol="Bs")
 

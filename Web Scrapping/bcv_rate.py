@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 
+BCV_URL = "https://www.bcv.org.ve/"
+
 def fetch_website_data(url, verify_ssl=False):
     response = requests.get(url, verify=verify_ssl)
     if response.status_code == 200:
@@ -17,10 +19,14 @@ def get_bcv_usd_ves_rate_from_website_content(website_content):
         rate_usd_ves_text_process = rate_usd_ves_text.replace(' ', '').replace(',', '.')
         return float(rate_usd_ves_text_process)
 
-def usd_ves_bcv_rate():
+def get_usd_ves_bcv_rate():
     # USD/VES Rate
-    website_content = fetch_website_data(url='https://www.bcv.org.ve/')
+    website_content = fetch_website_data(BCV_URL)
     if website_content:
         usd_ves_rate = get_bcv_usd_ves_rate_from_website_content(website_content)
         return usd_ves_rate
     return None
+
+# Client
+current_bcv_rate = get_usd_ves_bcv_rate()
+print(f"\nCurrent BCV Rate: {current_bcv_rate}")
